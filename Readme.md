@@ -87,7 +87,7 @@ BuddyBuilder/
 
 1. **Clone the repository**
    ```bash
-   git clone (https://github.com/dnguyen0091/Buddy-Builder-Web.git)
+   git clone https://github.com/dnguyen0091/Buddy-Builder-Web.git
    cd BuddyBuilder
    ```
 
@@ -224,7 +224,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **David Nguyen** - *Front-End* - [dnguyen0091](https://github.com/yourusername)
+- **Lucas Santana** - *Front-End* -[Lucass0104](https://github.com/Lucass0104)
+- **Juniper Desanto** - *API* - [JuniperDeSanto](https://github.com/JuniperDeSanto)
+- **Prasaad Joshi** - *API* - [prasaadjg](https://github.com/prasaadjg)
+- **James Barnett** - *API/Database* - [shadowstorm37](https://github.com/shadowstorm37)
 
 ## 🙏 Acknowledgments
 
