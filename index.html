@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    
+    <title>Buddy Builder</title>
+</head>
+    <body>
+
+        
+        <img src="/assets/rocket.svg" alt="rocket" id="rocket">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <header>
+            <!-- Header/Logo Element -->
+            <img src="/assets/logo.png" alt="logo" id="logo">
+            <button id="signInUpButton">Sign In/Up</button>
+            <button id="signOutButton">Sign Out</button>
+        </header>
+        <div class="content">
+            <div class="titlePage">
+                <h1>Welcome To Buddy Builder</h1>
+                <h3>Your ultimate companion for managing and connecting with your contacts.</h3>
+            </div>
+
+            <div class="body">
+                
+                <div id="searchAdd">
+                    <div id="addBuddy">
+                        <!-- <button id="addContactButton">Add Buddy</button> -->
+                        <button id="addContactButton" title="Add Contact"><img src="assets/add.svg" alt="Add Contact" title="Add Contact"></button>
+                    </div>
+                    <div id="searchBar">
+                        <input id = "searchBarInp" type="text" placeholder="Search for a buddy...">
+                    </div>
+    
+                    <div id = "search">
+                        <!-- <button id = searchButton>Search</button> -->
+                        <button id="searchContactButton" title="Search For Buddy"><img src="assets/search.svg" alt="Search"></button>
+                    </div>
+    
+                    
+                </div>
+                <div id="displaySwitchContainer">
+                    <div id="displaySlider"></div>
+                    <button class="toggleButton" id="gridButton" title="Display in Grid Form"><img src="assets/grid.svg" alt="Grid Placeholder"></button>
+                    <button class="toggleButton" id="listButton" title="Display in List Form"><img src="assets/list.svg" alt="List Placeholder"></button>
+                </div>
+                
+
+                <!-- Container to hold all contacts -->
+                <div class="contactContainer">
+                    <div id="buddyGrid"></div>
+                </div>
+                
+            </div>
+        
+            
+        
+        </div>
+
+
+        
+        <!-- Sign In/Up Container -->
+            <div id="overlay">
+                <div class="signInUpForm" id="overlaySignInForm">
+                    <button id="closeButton1">X</button>
+                    <div id="switchCont">
+                        <div id="displaySlider2"></div>
+                        <button class="toggleButton" id="signInButton">Log In</button>
+                        <button class="toggleButton" id="signUpButton">Sign Up</button>
+                    </div>
+                    
+
+                    <div class="SignIn">
+                        <h2>Login</h2>
+                        <div class="messageLogIn">Username or Password is invalid</div>
+                        <form class="form" id="signIn" method="post">
+                            <div class="inputContainer">
+                                <div class="inputHeader">
+                                    <p>Username</p>
+                                    <p class="requiredField">*</p>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="text" name="username" placeholder="Username" id="username2">
+                                    <img src="/assets/user.svg" alt="userImg" class="input-icon">
+                                </div>
+                            </div>
+                            
+                            <div class="inputContainer">
+                                <div class="inputHeader">
+                                    <p>Password</p>
+                                    <p class="requiredField">*</p>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="password" name="password" placeholder="Password" id="password2">
+                                    <img src="/assets/eyeClosed.svg" alt="lockIcon" class="input-icon" id="eyeIcon2">
+                                </div>
+                            </div>
+                            
+                            <button type="submit">Login</button>
+                        </form>
+                    </div>
+
+                    
+                    <div class="SignUp">
+                        <h2>Sign Up</h2>
+                        <div id="messageSignUp"></div>
+                        <form class="form" id="signUp" method="post" novalidate>
+                            <div id="nameContainer">
+                                <div class="inputContainer">
+                                    <div class="inputHeader">
+                                        <p>First Name</p>
+                                        <p class="requiredField">*</p>
+                                    </div>
+                                    <input type="text" name="firstName" placeholder="First Name" id="firstName" required>
+                                </div>
+                                    
+                                <div class="inputContainer">
+                                    <div class="inputHeader">
+                                        <p>Last Name</p>
+                                        <p class="requiredField">*</p>
+                                    </div>
+                                    <input type="text" name="lastName" placeholder="Last Name" id="lastName" required>
+                                </div>
+                            </div>
+                        
+                            <div class="inputContainer">
+                                <div class="inputHeader">
+                                    <p>Username</p>
+                                    <p class="requiredField">*</p>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="text" 
+                                            name="username" 
+                                            placeholder="Username" 
+                                            required
+                                            pattern="^[a-zA-Z0-9_-]{3,20}$"
+                                            title="Username must be 3-20 characters and can only contain letters, numbers, underscores, and hyphens"
+                                            minlength="3"
+                                            maxlength="20"
+                                            id="username">
+                                    <img src="/assets/user.svg" alt="userImg" class="input-icon">
+                                </div>
+                            </div>
+                        
+                            <div class="inputContainer">
+                                <div class="inputHeader">
+                                    <p>Password</p>
+                                    <p class="requiredField">*</p>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input type="password" name="password" placeholder="Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" title="Password must be at least 8 characters long, contain at least one special character and one number" minlength="8" id="password">
+                                    <img src="/assets/eyeClosed.svg" alt="lockIcon" class="input-icon" id="eyeIcon1">
+                                </div>
+                            </div>
+                                
+                            <button id="signUpSubmit" type="submit">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <div id="requirements">
+                        <div id="signUpReqUser">
+                            <h1>Username Should Have:</h1>
+
+                            <div class="requirementCont">
+                                <div class="requirement">
+                                    <img src="assets/correct.svg" alt="correct" id="correctIcon">
+                                    <img src="assets/wrong.svg" alt="wrong" id="wrongIcon">
+                                    <p>3-20 characters </p>
+                                </div>
+                                <div class="requirement">
+                                    <img src="assets/correct.svg" alt="correct" id="correctIcon">
+                                    <img src="assets/wrong.svg" alt="wrong" id="wrongIcon">
+                                    <p>Only letters and  numbers </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="signUpReqPass">
+                            <h1>Password Should Have:</h1>
+                            
+                            <div class="requirementCont">
+                                <div class="requirement">
+                                    <img src="assets/correct.svg" alt="correct" id="correctIcon">
+                                    <img src="assets/wrong.svg" alt="wrong" id="wrongIcon">
+                                    <p>At least 8 characters </p>
+                                </div>
+                                <div class="requirement">
+                                    <img src="assets/correct.svg" alt="correct" id="correctIcon">
+                                    <img src="assets/wrong.svg" alt="wrong" id="wrongIcon">
+                                    <p>At least one special character and one number </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+        </div>
+        
+
+        <!-- Add Contact Container -->
+        <div id="overlay2">
+            <div class="addBuddyForm" id="overlayContactForm">
+                <button id="closeButton2" type="button">X</button>
+                <h2>Add Buddy</h2>
+                <form class="form" id="addContactForm" method="post">
+                    <div id="nameContainer">
+                        <div class="inputContainer" id="contactInput">
+                            <div class="inputHeader">
+                                <p>First Name</p>
+                                <p class="requiredField">*</p>
+                            </div>
+                            <input type="text" name="firstName" placeholder="First Name" required>
+                        </div>
+
+                        <div class="inputContainer" id="contactInput">
+                            <p>Last Name</p>
+                            <input type="text" name="lastName" placeholder="Last Name">
+                        </div>
+                    </div>
+
+
+                    <div id="contactInfoContainer">
+                        <div class="inputContainer" id="contactInput">
+                            <p>Email</p>
+                            <input type="text" name="email" placeholder="Email">
+                        </div>
+                    
+                        <div class="inputContainer" id="contactInput">
+                            <p>Phone Number</p>
+                            <input type="text" name="phone" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <button id="addSubmitButton" type="submit">Add Buddy</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Edit Contact Container -->
+        <div id="overlay3">
+            <div class="addBuddyForm" id="overlayContactForm">
+                <button id="closeButton3" type="button">X</button>
+                <h2>Edit Buddy</h2>
+                <form class="form" id="editContactForm" method="post">
+                    <div id="nameContainer">
+                        <div class="inputContainer" id="contactInput">
+                            <div class="inputHeader">
+                                <p>First Name</p>
+                                <p class="requiredField">*</p>
+                            </div>
+                            <input type="text" name="firstName" placeholder="First Name" required>
+                        </div>
+
+                        <div class="inputContainer" id="contactInput">
+                            <p>Last Name</p>
+                            <input type="text" name="lastName" placeholder="Last Name">
+                        </div>
+                    </div>
+
+
+                    <div id="contactInfoContainer">
+                        <div class="inputContainer" id="contactInput">
+                            <p>Email</p>
+                            <input type="text" name="email" placeholder="Email">
+                        </div>
+                    
+                        <div class="inputContainer" id="contactInput">
+                            <p>Phone Number</p>
+                            <input type="text" name="phone" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <button id="addSubmitButton" type="submit">Confirm Changes</button>
+                </form>
+            </div>
+        </div>
+        <!-- reference script  -->
+        <script src="js/index.js" type="module"></script>
+        
+    </body>
+</html>
