@@ -15,7 +15,6 @@ A modern, responsive CRUD (Create, Read, Update, Delete) contact management appl
 - **Responsive Design**: Works seamlessly across desktop and mobile devices
 
 ### Advanced Features
-- **Lazy Loading**: Optimized performance with intersection observer
 - **Visual Feedback**: Interactive UI elements with smooth transitions
 - **Password Security**: Toggle password visibility with eye icons
 - **Input Validation**: Real-time validation with requirement indicators
@@ -88,7 +87,7 @@ BuddyBuilder/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone (https://github.com/dnguyen0091/Buddy-Builder-Web.git)
    cd BuddyBuilder
    ```
 
